@@ -1,0 +1,9 @@
+@startuml
+
+cloud PortariaCarro
+node Producer
+PortariaCarro -[bold]-> Producer   : [json]
+
+@enduml
+
+

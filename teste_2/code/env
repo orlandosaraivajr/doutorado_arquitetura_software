@@ -1,0 +1,11 @@
+# MySQL credentials
+DB_NAME='database'
+DB_USER='root'
+DB_PASSWORD='SENHA'
+DB_HOST='127.0.0.1'
+# RabbitMQ credentials
+USERNAME='orlando'
+PASSWORD='SENHA'
+HOSTNAME='10.0.0.151'
+VIRTUAL_HOST_SERVER='fila_carros'
+QUEUE='hello'

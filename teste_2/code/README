@@ -1,0 +1,7 @@
+Renomear arquivo env para .env e alterar as credenciais
+
+Alinhamento do protótipo aos princípios dos 12 fatores ( https://12factor.net/pt_br/ ) com uso da biblioteca Python Decouple ( https://pypi.org/project/python-decouple/ )
+
+
+Dicas:
+[1] https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html
