@@ -3,15 +3,16 @@ import pika
 import socket
 from decouple import config
 
-username = config('USERNAME')
-password = config('PASSWORD')
-hostname = config('HOSTNAME')
-virtual_host_server = config('VIRTUAL_HOST_SERVER')
-queue = config('QUEUE')
+MQ_username = config('USERNAME')
+MQ_password = config('PASSWORD')
+MQ_hostname = config('HOSTNAME')
+MQ_virtual_host_server = config('VIRTUAL_HOST_SERVER')
+MQ_queue = config('QUEUE')
+MQ_port = config('PORT',default=5672, cast=int)
 
 # If you want to have a more secure SSL authentication, use ExternalCredentials object instead
-credentials = pika.PlainCredentials(username=username, password=password, erase_on_connect=True)
-parameters = pika.ConnectionParameters(host=hostname, port=5672, virtual_host=virtual_host_server, credentials=credentials)
+credentials = pika.PlainCredentials(username=MQ_username, password=MQ_password, erase_on_connect=True)
+parameters = pika.ConnectionParameters(host=MQ_hostname, port=MQ_port, virtual_host=MQ_virtual_host_server, credentials=credentials)
 
 # We are using BlockingConnection adapter to start a session. It uses a procedural approach to using Pika and has most of the asynchronous expectations removed
 connection = pika.BlockingConnection(parameters)
@@ -19,7 +20,7 @@ connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
 # Check for a queue and create it, if necessary
-channel.queue_declare(queue=queue)
+channel.queue_declare(queue=MQ_queue)
 
 message = socket.gethostname()
 
