@@ -1,0 +1,12 @@
+# MySQL credentials
+DB_NAME='portaria'
+DB_USER='root'
+DB_PASSWORD='SENHA'
+DB_HOST='10.0.0.151'
+# RabbitMQ credentials
+USERNAME='orlando'
+PASSWORD='SENHA'
+HOSTNAME='10.0.0.151'
+VIRTUAL_HOST_SERVER='fila_carros'
+QUEUE='hello'
+# PORT=5672
