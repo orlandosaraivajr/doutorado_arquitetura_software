@@ -1,0 +1,17 @@
+@startuml
+
+cloud PortariaCarro
+cloud PortariaPedestre
+node Producer
+queue RabbitMQ
+node Consumer
+database MySQL
+database PostgreSQL
+PortariaCarro -[bold]-> Producer   : [json]
+PortariaPedestre -[#red,thickness=4]-> Producer   : [not implemented]
+Producer -[bold]-> RabbitMQ   
+RabbitMQ -[bold]-> Consumer
+Consumer -[#blue]-> MySQL  : [SQL]
+Consumer -[#blue]-> PostgreSQL  : [SQL]
+
+@enduml
