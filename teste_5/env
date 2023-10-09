@@ -1,0 +1,20 @@
+# MySQL credentials
+DB_NAME='portaria'
+DB_USER='root'
+DB_PASSWORD='SENHA_MYSQL'
+DB_HOST='10.0.0.151'
+# PostgreSQL credentials
+PG_NAME='portaria'
+PG_USER='orlando'
+PG_PASSWORD='SENHA_POSTGRESQL'
+PG_HOST='10.0.0.151'
+# RabbitMQ credentials
+USERNAME='orlando'
+PASSWORD='SENHA_rabbitMQ'
+HOSTNAME='10.0.0.151'
+VIRTUAL_HOST_SERVER='fila_carros'
+QUEUE='hello'
+# PORT=5672
+# URL credentials
+# URL='http://masterdev.ddns.net:8082/acesso/all'
+URL='http://127.0.0.1:8000/'
