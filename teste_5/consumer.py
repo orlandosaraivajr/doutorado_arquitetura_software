@@ -28,7 +28,6 @@ PG_CONN = "postgresql+psycopg2://" + PG_USER + ":" + PG_PASSWORD + "@" + PG_HOST
 PG_engine = create_engine(PG_CONN)
 
 def write_MySQL(mensagem):
-    '100|BHX1293|1|E|30-09-2023|15:25:20| '
     id_local = mensagem[0]
     placa = mensagem[1]
     portaria =  mensagem[2]
@@ -58,7 +57,6 @@ def callback(ch, method, properties, body):
     write_MySQL(body)
     write_PostgreSQL(body)
         
-
 def consume():
     credentials = pika.PlainCredentials(MQ_username, MQ_password)
     parameters = pika.ConnectionParameters(host=MQ_hostname, port=MQ_port, virtual_host=MQ_virtual_host_server, credentials=credentials)

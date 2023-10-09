@@ -12,13 +12,14 @@ settings.configure(
 
 
 def dados_placas(request):
-    list_to_json=[{'id':100,'placa':'BHX1293', 'portaria':'1', 'tipo':'E','data':'30-09-2023','hora':'15:25:20' },
-                  {'id':101,'placa':'BHX1233', 'portaria':'1', 'tipo':'E','data':'30-09-2023','hora':'15:25:21' },
-                  {'id':102,'placa':'BXA1293', 'portaria':'1', 'tipo':'E','data':'30-09-2023','hora':'15:25:22' }
+    list_to_json=[{'id':100,'placa':'BHX1293', 'portaria':'1', 'tipo':'E','data':'2023-09-30','hora':'15:25:20'},
+                  {'id':101,'placa':'BHX1233', 'portaria':'1', 'tipo':'E','data':'2023-09-30','hora':'15:25:21'},
+                  {'id':102,'placa':'BXA1293', 'portaria':'1', 'tipo':'E','data':'2023-09-30','hora':'15:25:22'},
+                  {'id':103,'placa':'XTS2293', 'portaria':'1', 'tipo':'S','data':'2023-09-30','hora':'15:25:23'},
                   ]
-    list_to_json2=[{'id':200,'placa':'GIN5839', 'portaria':'1', 'tipo':'S','data':'20-09-2023','hora':'00:50:20' },
-                  {'id':201,'placa':'ABC1234', 'portaria':'1', 'tipo':'E','data':'20-09-2023','hora':'00:45:00' },
-                  {'id':202,'placa':'ABC1234', 'portaria':'1', 'tipo':'S','data':'20-09-2023','hora':'00:45:45' }
+    list_to_json2=[{'id':200,'placa':'GIN5839', 'portaria':'1', 'tipo':'S','data':'2023-09-20','hora':'00:50:20' },
+                  {'id':201,'placa':'ABC1234', 'portaria':'1', 'tipo':'E','data':'2023-09-20','hora':'00:45:00' },
+                  {'id':202,'placa':'ABC1234', 'portaria':'1', 'tipo':'S','data':'2023-09-20','hora':'00:45:45' }
                   ]
     return JsonResponse(list_to_json2, safe=False)
 
