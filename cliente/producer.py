@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 import pika
-import socket
 from decouple import config
-from datetime import datetime
 import requests
 
 MQ_username = config('USERNAME')
